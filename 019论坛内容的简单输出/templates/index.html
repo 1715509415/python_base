@@ -1,0 +1,49 @@
+<head>
+    <style type="text/css">
+        * {
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+        }
+
+        input {
+            border: 1px solid #CCCCCC;
+            background: #FFFFCC;
+        }
+
+        textarea {
+            border: 1px solid #CCCCCC;
+            background: #FFFFCC;
+        }
+    </style>
+</head>
+<html>
+<body style="font-size:16px; color:blue; font-family:'微软雅黑'">
+<div style="width:580px; height:440px; background:url(../static/image/1.jpg)">
+    <div style=" margin:130px 20px 20px 130px; width:330px; height:220px;">
+        <form action='' method='post'>
+            标题：<input type='text' name='text'><br>
+            内容：<textarea name='te' cols='20' rows='3'></textarea>
+            <select name="check">
+                <option value='谢谢您'>谢谢您</option>
+                <option value='您好'>您好</option>
+                <option value='再见'>再见</option>
+            </select><br>
+
+            <p>&nbsp;</p>
+            <input type='submit' name='sub' value='确定'>
+            <input type='reset' name='res' value='重置'>
+
+        </form>
+        <p>
+        <center>
+            <div style="margin:20px auto;">
+                {% if content %}
+                    {{ content|safe }}
+                {% endif %}
+            </div>
+        </center>
+    </div>
+</div>
+</body>
+</html>
